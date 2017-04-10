@@ -1,5 +1,6 @@
 package page.info;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -15,4 +16,15 @@ public class TemperatureConverterPage {
             throw new WrongPageException("Incorrect page for temperature conversion");
         }
     }
+    public void inputFahrenheit(double valueOfFahrenheit){
+        String s = Double.toString(valueOfFahrenheit);
+        driver.findElement(By.xpath(".//*[@id='_Aif/input")).clear();
+        driver.findElement(By.xpath(".//*[@id='_Aif/input")).sendKeys(s);
+    }
+    public String actualResult(){
+        String valueOfCelsius = driver.findElement(By.xpath(".//*[@id='Aif/input")).getAttribute("value");
+        System.out.println(valueOfCelsius);
+        return valueOfCelsius;
+    }
+    public String expectedResult(){ return "37"; }
 }
