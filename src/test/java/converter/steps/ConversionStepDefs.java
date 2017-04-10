@@ -2,6 +2,8 @@ package converter.steps;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
+import static org.junit.Assert.fail;
+
 
 /**
  * Created by Novus_Admin on 4/7/2017.
@@ -9,7 +11,8 @@ import cucumber.api.java.en.*;
 public class ConversionStepDefs {
     @Given("^I want to convert (\\d+)\\.(\\d+) degree Fahrenheit to Celsius$")
     public void i_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1, int arg2) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+        // Write code here that turns the phrase above into concrete actions]
+        fail("It is failed");
         throw new PendingException();
     }
 
