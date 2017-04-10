@@ -16,6 +16,7 @@ public class Google {
         this.driver = driver;
         baseURL = "https://www.google.co.uk/";
         //driver.get(baseURL + "?gfe_rd=cr&ei=HU_rWP_SFcPU8ge0x5noDA#q=fahrenheit+to+celsius");
+        driver.get(baseURL);
         System.out.println(driver.getTitle());
         //if (!driver.getTitle().equals("fahrenheit to celsius - Google Search"))
         if (!driver.getTitle().equals("Google")) {
